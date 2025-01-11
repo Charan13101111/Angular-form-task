@@ -1,0 +1,192 @@
+
+          
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form row g-3">
+      <!-- First Name -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input 
+          id="firstName"
+          type="text"
+          formControlName="firstname"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('firstName') }"
+          placeholder="Enter First name">
+        <div *ngIf="isFieldInvalid('firstName')" class="error-message">
+          {{ getErrorMessage('firstName') }}
+        </div>
+      </div>
+      </div>
+
+
+      <!-- Second Name -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="secondName">Second Name</label>
+        <input 
+          id="secondName"
+          type="text"
+          formControlName="secondName"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('secondName') }"
+          placeholder="Second name">
+        <div *ngIf="isFieldInvalid('secondName')" class="error-message">
+          {{ getErrorMessage('secondName') }}
+        </div>
+      </div>
+       </div>
+
+
+      <!-- Email -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input 
+          id="email"
+          type="email"
+          formControlName="email"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('email') }"
+          placeholder="Email">
+        <div *ngIf="isFieldInvalid('email')" class="error-message">
+          {{ getErrorMessage('email') }}
+        </div>
+      </div>
+       </div>
+
+
+      <!-- DOB -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input 
+          id="dob"
+          type="date"
+          formControlName="dob"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('dob') }">
+        <div *ngIf="isFieldInvalid('dob')" class="error-message">
+          {{ getErrorMessage('dob') }}
+        </div>
+      </div>
+       </div>
+
+      <!-- Phone -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input 
+          id="phone"
+          type="tel"
+          formControlName="phone"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('phone') }"
+          placeholder="Mobile">
+        <div *ngIf="isFieldInvalid('phone')" class="error-message">
+          {{ getErrorMessage('phone') }}
+        </div>
+      </div>
+      </div>
+
+      <!-- Address -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input 
+          id="address"
+          type="text"
+          formControlName="address"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('address') }"
+          placeholder="Address">
+        <div *ngIf="isFieldInvalid('address')" class="error-message">
+          {{ getErrorMessage('address') }}
+        </div>
+      </div>
+      </div>
+
+      <!-- Country -->
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input 
+          id="country"
+          type="text"
+          formControlName="country"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('country') }"
+          placeholder="Country">
+        <div *ngIf="isFieldInvalid('country')" class="error-message">
+          {{ getErrorMessage('country') }}
+        </div>
+      </div>
+
+      <!-- PAN -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="panNo">PAN Number</label>
+        <input 
+          id="panNo"
+          type="text"
+          formControlName="panNo"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('panNo') }"
+          placeholder="PAN number">
+        <div *ngIf="isFieldInvalid('panNo')" class="error-message">
+          {{ getErrorMessage('panNo') }}
+        </div>
+      </div>
+      </div>
+
+
+
+      <!-- Aadhar -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="aadhar">Aadhar Number</label>
+        <input 
+          id="aadhar"
+          type="text"
+          formControlName="aadhar"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('aadhar') }"
+          placeholder="Aadhar number">
+        <div *ngIf="isFieldInvalid('aadhar')" class="error-message">
+          {{ getErrorMessage('aadhar') }}
+        </div>
+      </div>
+      </div>
+
+
+      <!-- SSN -->
+      <div class="col-md-6">
+      <div class="form-group">
+        <div *ngIf="showSSN">
+          <label for="ssn">SSN</label>
+          <input id="ssn" type="text" formControlName="ssn" class="form-control" placeholder="SSN" />
+          <div *ngIf="isFieldInvalid('ssn')">
+            {{ getErrorMessage('ssn') }}
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Education -->
+      <div class="form-group">
+        <label for="education">Education Qualification</label>
+        <input 
+          id="education"
+          type="text"
+          formControlName="education"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('education') }"
+          placeholder="Education qualification">
+        <div *ngIf="isFieldInvalid('education')" class="error-message">
+          {{ getErrorMessage('education') }}
+        </div>
+      </div>
+  
+  
+    <div class="form-group submit-button">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+     </form>
